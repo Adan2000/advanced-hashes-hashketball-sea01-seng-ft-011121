@@ -131,13 +131,18 @@ end
 
 def num_points_scored(player_search)
   game_hash.each do |team, team_info|
-    team_info[:players].each do |player|
+     team_info[:players].each do |player|
       if player[:player_name] == player_search
         return player[:points]
       end
     end
   end
 end
+
+
+
+
+
 
 def shoe_size(name)
   game_hash.each do |team, team_info|
@@ -149,6 +154,15 @@ def shoe_size(name)
   end
 end
 
+
+
+
+
+
+
+
+
+
 def team_colors(team_input)
   if team_input.downcase == "charlotte hornets" 
     return game_hash[:away][:colors]
@@ -156,11 +170,29 @@ def team_colors(team_input)
   end
 end
 
+
+
+
+
+
+
+
+
+
 def team_names
   game_hash.map do |team, team_info|
     team_info[:team_name]
   end
 end
+
+
+
+
+
+
+
+
+
 
 def player_numbers(input)
   output = []
@@ -178,6 +210,17 @@ def player_numbers(input)
   return output
 end
 
+
+
+
+
+
+
+
+
+
+
+
 def player_stats (player)
   game_hash.each_key do |ha|
     game_hash[ha][:players].each_entry do |playerhash|
@@ -187,6 +230,20 @@ def player_stats (player)
     end
   end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def big_shoe_rebounds
   big_shoe = 0
